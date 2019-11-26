@@ -3,7 +3,7 @@
 if(!empty($_POST)){
 
     echo $_POST['val1'].' '.$_POST['sign'].' '.$_POST['val2'] . ' = ';
-
+/*
     if($_POST['sign'] === 'plus') {
         echo(intval($_POST['val1']) + intval($_POST['val2']));
 
@@ -25,11 +25,30 @@ if(!empty($_POST)){
             $resultat *= $val1;
             // $resultat = $resultat * $val1 ;
         }
-        echo $resultat
+        echo $resultat;
 
     } else {
         echo 'WTF !?!';
     }
+*/
+switch ($_POST['sign']) {
+    case 'plus':
+        echo(intval($_POST['val1']) + intval($_POST['val2']));
+        break;
+    case 'moins':
+        echo(intval($_POST['val1']) - intval($_POST['val2']));
+        break;
+    case 'fois':
+        echo(intval($_POST['val1']) * intval($_POST['val2']));
+        break;
+    case 'divise':
+        echo(intval($_POST['val1']) / intval($_POST['val2']));
+        break;
+    default:
+        echo 'WTF !?!';
+        break;
+}
+
 }
 ?>
 <form action="index.php" method="POST">
