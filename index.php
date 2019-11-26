@@ -7,7 +7,7 @@ function exposant($val1, $val2) {
     return $resultat ;
 }
 
-if(!empty($_POST)){
+
 
   
 /*
@@ -51,30 +51,7 @@ if(!empty($_POST)){
         echo $resultat;
             break;   */
 
-    $result = 0;
 
-    switch ($_POST['sign']) {
-        case 'plus':
-            $result = (intval($_POST['val1']) + intval($_POST['val2']));
-            break;
-        case 'moins':
-            $result = (intval($_POST['val1']) - intval($_POST['val2']));
-            break;
-        case 'fois':
-            $result = (intval($_POST['val1']) * intval($_POST['val2']));
-            break;
-        case 'divise':
-            $result = (intval($_POST['val1']) / intval($_POST['val2']));
-            break;
-        case 'exposant':
-            $result = exposant(intval($_POST['val1']), intval($_POST['val2']));
-            break;
-        default:
-            echo 'WTF !?!';
-            break;
-    }
-    echo $_POST['val1'].' '.$_POST['sign'].' '.$_POST['val2']. ' = '. $result;
-}
 
 //Initialise les variables
 
@@ -84,17 +61,11 @@ $sign = '';
 
 //Les 2 lignes ci-desous servent à conserver le nombre dans la case.
 
-if(!empty($_POST['val1'])) {
-    $val1 = $_POST['val1'] ;
-}
-if(!empty($_POST['val2'])) {
-    $val2 = $_POST['val2'] ;
-}
-if(!empty($_POST['sign'])) {
-    $sign = $_POST['sign'] ;
-}
 
 $options = ['plus', 'moins', 'fois', 'divise', 'exposant'];
+
+include 'traitement.php' ;
+    if(!empty($_POST)){
 
 ?>
 
