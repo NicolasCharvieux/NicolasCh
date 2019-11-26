@@ -1,9 +1,15 @@
 <?php
-
+function exposant($val1, $val2) {
+    $resultat = 1 ;
+    for($i = 0 ; $i<$val2; $i ++) {
+        $resultat = $resultat * $val1 ;
+    }
+    return $resultat ;}
 if(!empty($_POST)){
 
     echo $_POST['val1'].' '.$_POST['sign'].' '.$_POST['val2'] . ' = ';
 /*
+
     if($_POST['sign'] === 'plus') {
         echo(intval($_POST['val1']) + intval($_POST['val2']));
 
@@ -31,6 +37,17 @@ if(!empty($_POST)){
         echo 'WTF !?!';
     }
 */
+  /* case 'exposant':
+        //boucle
+        $val1 = intval($_POST['val1']);
+        $val2 = intval($_POST['val2']);
+        $resultat = 1 ;
+        for($i = 0; $i<$val2; $i++) {
+            $resultat *= $val1;
+            // $resultat = $resultat * $val1 ;
+        }
+        echo $resultat;
+            break;   */
 switch ($_POST['sign']) {
     case 'plus':
         echo(intval($_POST['val1']) + intval($_POST['val2']));
@@ -44,32 +61,16 @@ switch ($_POST['sign']) {
     case 'divise':
         echo(intval($_POST['val1']) / intval($_POST['val2']));
         break;
-   /* case 'exposant':
-        //boucle
-        $val1 = intval($_POST['val1']);
-        $val2 = intval($_POST['val2']);
-        $resultat = 1 ;
-        for($i = 0; $i<$val2; $i++) {
-            $resultat *= $val1;
-            // $resultat = $resultat * $val1 ;
-        }
-        echo $resultat;
-            break;   */
-    
-    function exposant($val1, $val2) {
-        $resultat = 1 ;
-        for($i = 0 ; $i<$val2; $i ++) {
-            $resultat = $resultat * $val1 ;
-        }
-        return $resultat ;
-    }
+    case 'exposant':
+        echo exposant(intval($_POST['val1']), intval($_POST['val2']));
+        break;
 
     default:
         echo 'WTF !?!';
         break;
 }
-
 }
+ 
 ?>
 <form action="index.php" method="POST">
     <label for="val1">Val 1 </label>
