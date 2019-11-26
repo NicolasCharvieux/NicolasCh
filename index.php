@@ -44,6 +44,17 @@ switch ($_POST['sign']) {
     case 'divise':
         echo(intval($_POST['val1']) / intval($_POST['val2']));
         break;
+    case 'exposant':
+        //boucle
+        $val1 = intval($_POST['val1']);
+        $val2 = intval($_POST['val2']);
+        $resultat = 1 ;
+        for($i = 0; $i<$val2; $i++) {
+            $resultat *= $val1;
+            // $resultat = $resultat * $val1 ;
+        }
+        echo $resultat;
+            break;
     default:
         echo 'WTF !?!';
         break;
