@@ -1,5 +1,7 @@
 <?php
 
+require 'librairie.php';
+
 $result = 0;
 
 switch ($_POST['sign']) {
