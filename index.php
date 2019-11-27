@@ -64,6 +64,8 @@ if(!empty($_POST)){
 
 ?>
 
+<h1>Calculatrice</h1>
+
 <form action="index.php" method="POST">
     <label for="val1">Val 1 </label>
     <input type="text" name="val1" id="val1" value="<?php echo $val1; ?>"/>
