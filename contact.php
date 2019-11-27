@@ -1,0 +1,5 @@
+<?php
+include 'header.html';
+?>
+
+<h1>Contact</h1>
