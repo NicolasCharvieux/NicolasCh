@@ -1,0 +1,61 @@
+#menuphp {
+    background-color: rgb(61, 61, 61);
+    display: flex;
+    justify-content: space-around;
+    height: 75px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 150%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+i {
+    padding: 25px;
+    color: white;
+    font-size: 150%;
+}
+
+#calcul {
+    padding: 25px;
+}
+
+#ongletor {
+    padding: 25px;
+}
+
+#ongletcontact {
+    padding: 25px;
+}
+
+label {
+    display: flex;
+    margin-bottom: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 120%;
+}
+
+textarea {
+    border: solid 2px black;
+    background-color: rgb(146, 146, 146);
+    color: white;
+    font-size: 110%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#bouton {
+    background-color: cornflowerblue;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border: solid 1px black;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    padding: 5px;
+}
