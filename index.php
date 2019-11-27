@@ -64,9 +64,10 @@ $sign = '';
 
 $options = ['plus', 'moins', 'fois', 'divise', 'exposant'];
 
-include 'traitement.php' ;
-    if(!empty($_POST)){
 
+if(!empty($_POST)){
+    include 'traitement.php' ;
+}
 ?>
 
 <form action="index.php" method="POST">
@@ -83,15 +84,10 @@ include 'traitement.php' ;
             echo ">".$options[$i]."</option>";
         }
         ?>
-            <!-- <option <?php if($sign === 'plus') {echo 'selected';} ?>>plus</option>
-            <option <?php if($sign === 'moins') {echo 'selected';} ?>>moins</option>
-            <option <?php if($sign === 'fois') {echo 'selected';} ?>>fois</option>
-            <option <?php if($sign === 'divise') {echo 'selected';} ?>>divise</option>
-            <option <?php if($sign === 'exposant') {echo 'selected';} ?>>exposant</option> -->
+            
     </select>
     <label for="val2">Val 2 </label>
     <input type="text" name="val2" id="val2" value="<?php echo $val2; ?>" />
-    <input type="text" value="<?php echo $result ?>"/>
     <input type="submit" value="calcule" />
     <input type="text" disabled value="<?php echo $result; ?>">
 </form>
