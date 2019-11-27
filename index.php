@@ -1,6 +1,6 @@
 <?php
 
-
+include 'header.html' ;
 
 /*
 
@@ -46,6 +46,7 @@
 
 
 //Initialise les variables
+$result = '';
 
 $val1 = '';
 $val2 = '';
@@ -60,6 +61,7 @@ $options = ['plus', 'moins', 'fois', 'divise', 'exposant'];
 if(!empty($_POST)){
     include 'traitement.php' ;
 }
+
 ?>
 
 <form action="index.php" method="POST">
@@ -67,6 +69,7 @@ if(!empty($_POST)){
     <input type="text" name="val1" id="val1" value="<?php echo $val1; ?>"/>
     <label for="sign">Sign </label>
     <select name="sign" id="sign" >
+
         <?php
         for($i=0; $i<count($options); $i++) {
             echo '<option ';
@@ -83,3 +86,9 @@ if(!empty($_POST)){
     <input type="submit" value="calcule" />
     <input type="text" disabled value="<?php echo $result; ?>">
 </form>
+
+<?php
+
+include 'footer.html' ;
+
+?>
