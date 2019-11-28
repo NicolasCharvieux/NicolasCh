@@ -37,25 +37,14 @@ label {
     font-size: 120%;
 }
 
-textarea {
-    border: solid 2px black;
-    background-color: rgb(146, 146, 146);
-    color: white;
-    font-size: 110%;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 h1 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#bouton {
-    background-color: cornflowerblue;
-    color: white;
+div {
     font-family: Arial, Helvetica, sans-serif;
-    border: solid 1px black;
-    display: flex;
-    justify-content: center;
-    margin-top: 5px;
-    padding: 5px;
+}
+
+textarea {
+    font-family: Arial, Helvetica, sans-serif;
 }
